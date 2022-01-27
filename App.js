@@ -35,12 +35,12 @@ export default function App() {
     setModalVisible(true);
   };
 
-  const deleteTask = () => {
-    let itemsCopy = [...taskItems];
-    itemsCopy.splice(indexUpdate, 1);
-    setTaskItems(itemsCopy);
-    setModalVisible(false);
-  };
+  // const deleteTask = () => {
+  //   let itemsCopy = [...taskItems];
+  //   itemsCopy.splice(indexUpdate, 1);
+  //   setTaskItems(itemsCopy);
+  //   setModalVisible(false);
+  // };
 
   const toggleModalVisibility = () => {
     setModalVisible(false);
@@ -121,7 +121,7 @@ export default function App() {
             {/** This button is responsible to close the modal */}
             <View style={styles.modalBtn}>
               <Button title="Update" onPress={updateTask} />
-              <Button title="Delete" onPress={deleteTask} />
+              {/* <Button title="Delete" onPress={deleteTask} /> */}
               <Button title="Close" onPress={toggleModalVisibility} />
             </View>
           </View>
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
     transform: [{ translateX: -(width * 0.4) }, { translateY: -90 }],
     height: 180,
     width: width * 0.8,
-    backgroundColor: "#FFF",
+    backgroundColor: "#fff",
     borderRadius: 7,
   },
   textInput: {
@@ -206,8 +206,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   modalBtn: {
-    marginTop: 20,
-    paddingHorizontal: 40,
+    marginTop: 15,
+    paddingHorizontal: 80,
     width: width,
     flexDirection: "row",
     justifyContent: "space-around",
